@@ -38,7 +38,10 @@ public class Campo extends javax.swing.JFrame {
                 if(numCaixa[i][j] != -1){
                     abrir(i,j);
                     revelar();  
-                }else perder();
+                }else{
+                    perder();
+                    javax.swing.JOptionPane.showMessageDialog(null, "Você perdeu!");
+                }
                 checarVitoria();
             }else revelar();            
         }
@@ -141,8 +144,6 @@ public class Campo extends javax.swing.JFrame {
         }
         primeiroMov = false;
         podeJogar = true;
-        
-        
     }
     
     public void resiz(){
@@ -177,11 +178,11 @@ public class Campo extends javax.swing.JFrame {
         jPanel_Campo.setLayout(jPanel_CampoLayout);
         jPanel_CampoLayout.setHorizontalGroup(
             jPanel_CampoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 425, Short.MAX_VALUE)
         );
         jPanel_CampoLayout.setVerticalGroup(
             jPanel_CampoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 379, Short.MAX_VALUE)
+            .addGap(0, 433, Short.MAX_VALUE)
         );
 
         jMenu1.setText("Jogo");
@@ -207,7 +208,7 @@ public class Campo extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel_Campo, javax.swing.GroupLayout.DEFAULT_SIZE, 379, Short.MAX_VALUE)
+            .addComponent(jPanel_Campo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
